@@ -6,9 +6,8 @@ savoir :
 
 Appelés aussi indices arithmétique simples. Comme leur nom l’indique, ils sont calculés sur la base de la moyenne arithmétique simple. C'est-à-dire qu’on divise la somme des cours des actions qui composent l’indice à un temps « t » sur le nombre d’action, pour obtenir ce qu’on appelle la moyenne équipondérés (MEP).
 ```math
-Moyenne_{t} = \frac{\sum_{k=1}^{n} P_{i}(t)}{D(t)}
+Moyenne_{t} = \frac{\sum P_{i}(t)}{D(t)}
 ```
-$$Moyenne_{t} = \frac{\sum_{k=1}^n P_{i}(t)}{D(t)}$$
 
 Avec :
 
