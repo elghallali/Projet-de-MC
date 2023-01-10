@@ -39,7 +39,7 @@ Cette méthode est plus représentative, parce qu’elle tient compte du nombre 
 
 ```math
 
-Indice(t)  = Indice(t-1).\frac{\sum_{i=1}^n P_{i}(t).NAC_{i}(t-1)}{\sum_{i=1}^n P_{i}(t-1).NAC_{i}(t-1)}
+Indice(t)  = Indice(t-1).\frac{\sum P_{i}(t).NAC_{i}(t-1)}{\sum P_{i}(t-1).NAC_{i}(t-1)}
 ```
 
 Avec :
@@ -54,7 +54,7 @@ $NAC_{i}(t-1)$ : le nombre d'actions en circulation à $t-1$.
 
 ```math
 
-I = \frac{\sum_{i = 1}^n f_{i}(t).F_{i}(t).Q_{i}(t).C_{i}(t)}{Bo.K(t)}
+I = \frac{\sum f_{i}(t).F_{i}(t).Q_{i}(t).C_{i}(t)}{Bo.K(t)}
 ```
 
 Avec :
