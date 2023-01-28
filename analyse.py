@@ -1,12 +1,19 @@
+# python pip install pandas
 import pandas as pd
-from pandas.plotting import table
+
+# python pip install seaborn
+import seaborn as sns
+
+# python pip install matplotlib
+import matplotlib.pyplot as plt
+
+# python pip install numpy
+import numpy as np
 import glob
 import os
-import seaborn as sns
-import matplotlib.pyplot as plt
-import numpy as np
 import re
 
+# Create Analyse class
 class Analyse:
 
     def __init__(self,location, tab):
@@ -85,14 +92,15 @@ def createLocation():
 
 # Create default dataset
 def createDataSet(location):
-    df = pd.read_excel('./MC_DATA_2022.xlsx', date_parser='%d/%m/%Y')
-    df.to_excel(f'{location}\\DATA.xlsx', index = False)
+    test = input("Entrer Oui/Yes : si vous necessites une dataset par default et Non/No : sinon : ")
+    test = test.lower()
+    if test in ['yes', 'oui', 'si']:
+        df = pd.read_excel('./MC_DATA_2022.xlsx', date_parser='%d/%m/%Y')
+        df.to_excel(f'{location}\\DATA.xlsx', index = False)
+
 
 location, tab = createLocation()
-test = input("Entrer Oui/Yes : si vous necessites une dataset par default et Non/No : sinon : ")
-test = test.lower()
-if test in ['yes', 'oui', 'si']:
-    createDataSet(location)
+createDataSet(location)
 analyse1 = Analyse(location, tab)
 analyse1.createNewDirectories()
 analyse1.create_files()
