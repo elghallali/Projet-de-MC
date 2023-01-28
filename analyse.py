@@ -1,14 +1,7 @@
-# python pip install openpyxl
-# python pip install pandas
+# pip install -r requirements.txt
 import pandas as pd
-
-# python pip install seaborn
 import seaborn as sns
-
-# python pip install matplotlib
 import matplotlib.pyplot as plt
-
-# python pip install numpy
 import numpy as np
 import glob
 import os
@@ -42,7 +35,7 @@ class Analyse:
         dataFrame_list = list(dataFrame.columns)
         df['Date'] = pd.to_datetime(dataFrame['Date'], format='%d/%m/%Y')
         for i in range(3,len(dataFrame_list)):
-            df[dataFrame_list[i]+' / ' + indice] = dataFrame[dataFrame_list[i]] / dataFrame[indice]
+            df[dataFrame_list[i]] = dataFrame[dataFrame_list[i]] / dataFrame[indice]
         new_data = df.iloc[:,1:].apply(np.mean)
         new_data_index = list(new_data.index)
         new_row = ['Moyenne des ratio']
@@ -52,15 +45,16 @@ class Analyse:
         df.to_excel(f'{self.location}\\Data\\Ratio{indice}.xlsx', index = False)
 
     # Correlation Method for creating Excel table
-    def correlation(self, dataFrame):
+    def correlation(self, dataFrame, indice):
         df = pd.DataFrame()
         dataFrame_list = list(dataFrame.columns)
-        for i in range(1, len(dataFrame_list)):
+        df[indice] = dataFrame[indice]
+        for i in range(3, len(dataFrame_list)):
             df[dataFrame_list[i]] = dataFrame[dataFrame_list[i]]
         df_corr = df.corr()
         sns.heatmap(df_corr, cmap='RdBu', center=0, vmin=-1, vmax=1)
-        plt.savefig(f'{self.location}\\images\\Correlation.png')
-        df_corr.to_excel(f'{self.location}\\Data\\Correlation.xlsx')
+        plt.savefig(f'{self.location}\\images\\Correlation{indice}.png')
+        df_corr.to_excel(f'{self.location}\\Data\\Correlation{indice}.xlsx')
 
     # Correlation Images Method
     def correlationImage(self, dataFrame, indice):
@@ -78,7 +72,7 @@ class Analyse:
             for indice in self.indices_list:
                 self.ratio(df, indice)
                 self.correlationImage(df, indice)
-            self.correlation(df)
+                self.correlation(df, indice)
 
 # Create Location path and a list of indexes
 def createLocation():
