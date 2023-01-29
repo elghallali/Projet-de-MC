@@ -54,6 +54,7 @@ class Analyse:
         df_corr = df.corr()
         sns.heatmap(df_corr, cmap='RdBu', center=0, vmin=-1, vmax=1)
         plt.savefig(f'{self.location}\\images\\Correlation{indice}.png')
+        plt.clf()
         df_corr.to_excel(f'{self.location}\\Data\\Correlation{indice}.xlsx')
 
     # Correlation Images Method
