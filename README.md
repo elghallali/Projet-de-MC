@@ -73,3 +73,11 @@ $C_{i}(t)$ : cours de la valeur $i$ en $t$
 $Bo$ : capitalisation de base au 31/12/1991
 
 $K(t)$ : coefficient d’ajustement en t de la capitalisation de base
+
+## Automatisation des données
+
+1. Create a folder in your computer 
+2. Copy the folder path
+3. run the project:
+  - paste the folder path in terminal ( location : )
+  
