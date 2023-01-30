@@ -76,8 +76,17 @@ $K(t)$ : coefficient d’ajustement en t de la capitalisation de base
 
 ## Automatisation des données
 
-1. Create a folder in your computer 
-2. Copy the folder path
-3. run the project:
-  -- paste the folder path in terminal ( location : )
+<ol>
+  <li>Create a folder in your computer </li>
+  <li>Copy the folder path</li>
+  <li>run the project:
+    <ul>
+      <li>paste the folder path in terminal ( location : )</li>
+      <li></li>
+      <li></li>
+    </ul>
+  </li>
+  <li></li>
+</ol>
+
   
