@@ -79,5 +79,5 @@ $K(t)$ : coefficient d’ajustement en t de la capitalisation de base
 1. Create a folder in your computer 
 2. Copy the folder path
 3. run the project:
-  - paste the folder path in terminal ( location : )
+  -- paste the folder path in terminal ( location : )
   
