@@ -77,17 +77,24 @@ $K(t)$ : coefficient d’ajustement en t de la capitalisation de base
 ## Automatisation des données
 
 <ol>
-  <li>Download the prject from github
+  <li>Download the project from github
+    <ol>
+      <li>Click in <strong>Code</strong></li>
+      <li>Click in <strong>Download ZIP</strong></li>
+    </ol>
+  </li>
+  <li>Unzip project</li>
+  <li>Open project in IDE like VSCode
     <ul>
-      <li></li>
-      <li></li>
+      <li>You need Python to run this project, you can install it from <a href="https://www.python.org/downloads/">here<a></li>
+      <li>then run this command in the terminal <strong>pip install -r requirements.txt</strong></li>
     </ul>
   </li>
-  <li>Create a folder in your computer </li>
+  <li>Create <strong>a folder</strong> in your computer </li>
   <li>Copy the folder path</li>
   <li>run the project:
     <ul>
-      <li>paste the folder path in terminal ( location : )</li>
+      <li>paste the folder path in terminal <strong>before ( location : )</strong> </li>
       <li>Tap Enter</li>
     </ul>
   </li>
